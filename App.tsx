@@ -143,14 +143,6 @@ const App: React.FC = () => {
             </button>
           ))}
         </nav>
-
-        <div className="p-4 border-t border-slate-100">
-          <div className="bg-slate-50 rounded-lg p-3 text-xs text-slate-500">
-            <p className="font-semibold text-slate-700 mb-1">Source Material:</p>
-            <p>• OPC 会议纪要 (2025.12.02)</p>
-            <p>• 录音转录 (张峰/阿当)</p>
-          </div>
-        </div>
       </aside>
 
       {/* Mobile Navigation Header */}
