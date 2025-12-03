@@ -9,15 +9,17 @@ import {
   Target,
   Zap,
   Globe,
-  Quote
+  Quote,
+  BookOpen
 } from 'lucide-react';
 import EcosystemGraph from './components/EcosystemGraph';
 import WhyBeidou from './components/WhyBeidou';
 import Roadmap from './components/Roadmap';
 import CoreEngines from './components/CoreEngines';
+import KnowledgeBase from './components/KnowledgeBase';
 
 // Tabs definition
-type TabId = 'overview' | 'blueprint' | 'why' | 'roadmap';
+type TabId = 'overview' | 'blueprint' | 'why' | 'roadmap' | 'knowledge';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabId>('overview');
@@ -28,6 +30,7 @@ const App: React.FC = () => {
     { id: 'blueprint', label: '全景蓝图', icon: <Map size={18} /> },
     { id: 'why', label: '核心优势', icon: <Zap size={18} /> },
     { id: 'roadmap', label: '行动路线', icon: <Flag size={18} /> },
+    { id: 'knowledge', label: '知识库', icon: <BookOpen size={18} /> },
   ];
 
   const renderContent = () => {
@@ -105,6 +108,8 @@ const App: React.FC = () => {
         return <WhyBeidou />;
       case 'roadmap':
         return <Roadmap />;
+      case 'knowledge':
+        return <KnowledgeBase />;
       default:
         return null;
     }
