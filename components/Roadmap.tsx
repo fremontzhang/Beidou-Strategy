@@ -19,14 +19,15 @@ const Roadmap: React.FC = () => {
       items: [
         { title: "AI 动态漫制作链整合", status: "doing", desc: "寻找并整合相关制作标的，提升二创效率。" },
         { title: "虚拟人技术 (OPG) 落地", status: "doing", desc: "依托版权核心，实现虚拟人规模化内容生产。" },
-        { title: "平台算法深度打通", status: "doing", desc: "进一步优化对Youtube等海外平台的底层规则理解。" }
+        { title: "深度融合平台流量规则", status: "doing", desc: "进一步优化对Youtube等海外平台的流量规则理解与应用。" },
+        { title: "Your Channel 私域平台落地", status: "doing", desc: "构建去中心化的私域内容变现基础设施，沉淀核心高净值用户。" }
       ]
     },
     {
       phase: "阶段三：超级个体生态 (未来)",
       timeframe: "2026+",
       items: [
-        { title: "全面C端化平台", status: "todo", desc: "从B端/达人端向广泛C端用户开放，人人皆可借助AI成为超级个体。" },
+        { title: "全面智能体协作平台", status: "todo", desc: "提供丰富的智能体工具，赋能创作者，人人皆可借助AI成为超级个体。" },
         { title: "全球第一出海分发平台", status: "todo", desc: "打造南京乃至全国第一的出海内容基础设施。" },
         { title: "自动化内容工厂", status: "todo", desc: "实现从创意到变现的全链路AI自动化。" }
       ]

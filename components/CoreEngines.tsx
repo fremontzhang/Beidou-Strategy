@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrainCircuit, Users, Database } from 'lucide-react';
+import { BrainCircuit, Users, Database, Share2 } from 'lucide-react';
 
 const CoreEngines: React.FC = () => {
   const engines = [
@@ -35,6 +35,17 @@ const CoreEngines: React.FC = () => {
         "数据驱动的运营决策",
         "商业化变现路径"
       ]
+    },
+    {
+      title: "去中心化私域网络",
+      description: "构建 Your Channel 创作者私域变现生态。",
+      icon: <Share2 size={32} strokeWidth={1.5} />,
+      items: [
+        "去中心化私域内容订阅",
+        "沉淀核心高净值用户",
+        "创作者独立自主分发",
+        "高黏性粉丝商业变现"
+      ]
     }
   ];
 
@@ -44,7 +55,7 @@ const CoreEngines: React.FC = () => {
         <span className="w-1 h-8 bg-blue-600 rounded-full block"></span>
         北斗智影核心引擎
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {engines.map((engine, idx) => (
           <div key={idx} className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 group">
             <div className="bg-slate-50 w-14 h-14 rounded-xl flex items-center justify-center mb-6 text-slate-700 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">

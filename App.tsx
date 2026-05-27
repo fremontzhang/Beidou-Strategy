@@ -43,24 +43,28 @@ const App: React.FC = () => {
               <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500 opacity-20 rounded-full blur-[100px] transform translate-x-1/2 -translate-y-1/2"></div>
               <div className="relative z-10">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold mb-6">
-                   2025 战略核心
+                   战略核心
                 </div>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                   北斗智影<br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300">快内容分发平台</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 block mt-2 text-2xl md:text-3xl lg:text-4xl">公域流量引擎 赋能 去中心化私域生态</span>
                 </h1>
                 <p className="text-slate-300 text-lg md:text-xl max-w-3xl leading-relaxed mb-10">
-                  以 <b>AI分发变现能力</b> 为核心，通过 <b>AI 创作</b> 为基础 + <b>版权控股</b> 为辅助，形成基于产销一体化的快内容分发平台。
+                  构建产业链上下游联动闭环：由 <b>Your Channel</b> 承载去中心化的内容创作与私域消费，依托 <b>北斗智影</b> 的公域快内容分发引擎精准获取流量，最终形成“公域极致引流，私域高效变现”的产销生态。
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                   <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
                     <div className="text-blue-400 font-bold mb-1 flex items-center gap-2"><Globe size={16}/> 核心定位</div>
-                    <div className="text-sm text-slate-200">面向C端的出海分发平台</div>
+                    <div className="text-sm text-slate-200">公域引流与私域变现联动生态</div>
                   </div>
                    <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
                     <div className="text-emerald-400 font-bold mb-1 flex items-center gap-2"><LayoutDashboard size={16}/> 商业模式</div>
-                    <div className="text-sm text-slate-200">分发平台 + 控股制作 (JV Model)</div>
+                    <div className="text-sm text-slate-200">分发平台 + 控股制作 (JV)</div>
+                  </div>
+                   <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
+                    <div className="text-rose-400 font-bold mb-1 flex items-center gap-2"><Share2 size={16}/> 私域矩阵</div>
+                    <div className="text-sm text-slate-200">Your Channel 去中心化变现</div>
                   </div>
                    <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/10">
                     <div className="text-purple-400 font-bold mb-1 flex items-center gap-2"><Zap size={16}/> 终极愿景</div>

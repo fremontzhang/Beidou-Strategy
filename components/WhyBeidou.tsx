@@ -1,6 +1,6 @@
 import React from 'react';
 import { AdvantagePoint } from '../types';
-import { BadgeDollarSign, ShieldCheck, Zap, Network } from 'lucide-react';
+import { BadgeDollarSign, ShieldCheck, Zap, Network, Share2 } from 'lucide-react';
 
 const WhyBeidou: React.FC = () => {
   const advantages: AdvantagePoint[] = [
@@ -27,6 +27,12 @@ const WhyBeidou: React.FC = () => {
       description: "不仅是分发工具，更是通过AI技术将达人升级为'超级个体'，实现规模化二创变现。",
       evidence: "会议纪要：将BP中 '人人都是创作者' 改为 '超级个体' - 2025.12.02 决策",
       icon: <Zap size={24} className="text-amber-500" />
+    },
+    {
+      title: "去中心化私域资产闭环",
+      description: "通过 Your Channel 构建创作者与铁粉的独立变现网络，打破公域平台流量枷锁，实现高客单价沉淀。",
+      evidence: "战略部署：建立去中心化私域内容平台，跑通粉丝订阅变现模式。",
+      icon: <Share2 size={24} className="text-rose-500" />
     }
   ];
 

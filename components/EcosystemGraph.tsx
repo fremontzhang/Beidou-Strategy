@@ -105,22 +105,32 @@ const EcosystemGraph: React.FC<EcosystemGraphProps> = () => {
     // --- RIGHT: Outputs & Strategy (Demand/Value Side) ---
     { 
       id: 'global_dist', 
-      label: '全球分发 (出海)', 
+      label: '全球分发 (公域出海)', 
       type: NodeType.OUTPUT, 
       status: NodeStatus.COMPLETED, 
-      description: 'CPS效率第一，南京乃至全国第一出海分发平台。', 
+      description: 'CPS效率第一，南京乃至全国第一出海公域分发平台。', 
       fx: rightColX,
-      fy: cy - 100,
+      fy: cy - 160,
       val: 38 
+    },
+    { 
+      id: 'your_channel', 
+      label: 'Your Channel (私域)', 
+      type: NodeType.OUTPUT, 
+      status: NodeStatus.IN_PROGRESS, 
+      description: '去中心化私域内容变现平台，聚焦粉丝订阅与高客单转化，沉淀核心高净值用户。', 
+      fx: rightColX - 20,
+      fy: cy - 20,
+      val: 33 
     },
     { 
       id: 'monetization', 
       label: '商业变现', 
       type: NodeType.OUTPUT, 
       status: NodeStatus.COMPLETED, 
-      description: '通过赋能变现，换取版权控股，构建产销同盟。', 
+      description: '通过赋能变现，构建产销同盟。结合公域佣金与私域高客单。', 
       fx: rightColX,
-      fy: cy + 100,
+      fy: cy + 120,
       val: 34 
     },
     { 
@@ -128,8 +138,8 @@ const EcosystemGraph: React.FC<EcosystemGraphProps> = () => {
       label: '超级个体', 
       type: NodeType.STRATEGY, 
       status: NodeStatus.PLANNING, 
-      description: '战略愿景：人人都是创作者，规模化二创。', 
-      fx: rightColX + 30, 
+      description: '战略愿景：人人都是创作者，智能体矩阵协作。', 
+      fx: rightColX + 50, 
       fy: cy,
       val: 28 
     },
@@ -152,15 +162,19 @@ const EcosystemGraph: React.FC<EcosystemGraphProps> = () => {
     { source: 'jv_opg', target: 'cap_ai', label: '版权' },
 
     // Platform to Output
-    { source: 'beidou', target: 'global_dist', label: '分发' },
+    { source: 'beidou', target: 'global_dist', label: '公域引擎' },
+    { source: 'beidou', target: 'your_channel', label: '私域基建' },
     
     // Engines enabling Output
-    { source: 'cap_platform', target: 'global_dist', label: '算法支撑' },
-    { source: 'cap_platform', target: 'monetization', label: '变现路径' },
+    { source: 'cap_platform', target: 'global_dist', label: '平台算法' },
+    { source: 'cap_platform', target: 'your_channel', label: '去中心化设计' },
 
     // Logic Flow
-    { source: 'global_dist', target: 'monetization', label: '变现' },
-    { source: 'monetization', target: 'super_individual', label: '孵化' }
+    { source: 'global_dist', target: 'your_channel', label: '精准引流' },
+    { source: 'global_dist', target: 'monetization', label: '流量变现' },
+    { source: 'your_channel', target: 'monetization', label: '高客单变现' },
+    { source: 'monetization', target: 'super_individual', label: '反哺' },
+    { source: 'your_channel', target: 'super_individual', label: '独立变现' }
   ];
 
   useEffect(() => {
