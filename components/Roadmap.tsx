@@ -14,22 +14,22 @@ const Roadmap: React.FC = () => {
       ]
     },
     {
-      phase: "阶段二：AI 能力注入 (进行中)",
+      phase: "阶段二：AI 能力注入 (已完成)",
       timeframe: "2025 Q4 - 2026",
       items: [
-        { title: "AI 动态漫制作链整合", status: "doing", desc: "寻找并整合相关制作标的，提升二创效率。" },
-        { title: "虚拟人技术 (OPG) 落地", status: "doing", desc: "依托版权核心，实现虚拟人规模化内容生产。" },
-        { title: "深度融合平台流量规则", status: "doing", desc: "进一步优化对Youtube等海外平台的流量规则理解与应用。" },
-        { title: "Your Channel 私域平台落地", status: "doing", desc: "构建去中心化的私域内容变现基础设施，沉淀核心高净值用户。" }
+        { title: "AI 动态漫制作链整合", status: "done", desc: "寻找并整合相关制作标的，提升二创效率。" },
+        { title: "虚拟人技术 (OPG) 落地", status: "done", desc: "依托版权核心，实现虚拟人规模化内容生产。" },
+        { title: "深度融合平台流量规则", status: "done", desc: "进一步优化对Youtube等海外平台的流量规则理解与应用。" },
+        { title: "Your Channel 私域平台落地", status: "done", desc: "构建去中心化的私域内容变现基础设施，沉淀核心高净值用户。" }
       ]
     },
     {
-      phase: "阶段三：超级个体生态 (未来)",
+      phase: "阶段三：超级个体生态 (进行中)",
       timeframe: "2026+",
       items: [
-        { title: "全面智能体协作平台", status: "todo", desc: "提供丰富的智能体工具，赋能创作者，人人皆可借助AI成为超级个体。" },
-        { title: "全球第一出海分发平台", status: "todo", desc: "打造南京乃至全国第一的出海内容基础设施。" },
-        { title: "自动化内容工厂", status: "todo", desc: "实现从创意到变现的全链路AI自动化。" }
+        { title: "全面智能体协作平台", status: "doing", desc: "提供丰富的智能体工具，赋能创作者，人人皆可借助AI成为超级个体。" },
+        { title: "全球第一出海分发平台", status: "doing", desc: "打造南京乃至全国第一的出海内容基础设施。" },
+        { title: "自动化内容工厂", status: "doing", desc: "实现从创意到变现的全链路AI自动化。" }
       ]
     }
   ];
@@ -47,12 +47,12 @@ const Roadmap: React.FC = () => {
         {roadmap.map((phase, idx) => (
           <div key={idx} className="relative pl-8">
             <div className={`absolute -left-[9px] top-0 w-4 h-4 rounded-full border-2 bg-white ${
-                idx === 0 ? 'border-green-500' : idx === 1 ? 'border-blue-500' : 'border-slate-300'
+                idx === 0 || idx === 1 ? 'border-green-500' : idx === 2 ? 'border-blue-500' : 'border-slate-300'
             }`}></div>
             
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
               <h3 className={`text-xl font-bold ${
-                  idx === 0 ? 'text-green-700' : idx === 1 ? 'text-blue-700' : 'text-slate-700'
+                  idx === 0 || idx === 1 ? 'text-green-700' : idx === 2 ? 'text-blue-700' : 'text-slate-700'
               }`}>{phase.phase}</h3>
               <span className="text-sm font-medium px-3 py-1 bg-slate-100 rounded-full text-slate-600 w-fit">
                 {phase.timeframe}
